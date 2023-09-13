@@ -1,0 +1,18 @@
+<template name="videosList">
+    <div class="videoslib-container">
+        <h1 class="videoslib-title">🎥 Videos Library</h1>
+        {{> videosListTemplate}}
+    </div>
+</template>
+
+<template name="videosListTemplate">
+        <ul class="videoslist-ul">
+            {{#each file in files}}
+            <li class="video-item-link" data-filename="{{file.name}}">{{file.name}}</li>
+            {{/each}}
+        </ul>
+        <div id="player-react-container">
+            {{> React component=Player fileName=fileName fileUrl=fileUrl}}
+        </div>
+        <div id="secondary"></div>
+</template>

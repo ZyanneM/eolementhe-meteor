@@ -1,0 +1,17 @@
+<template name="uploadForm">
+    <div class="upload-container">
+        <h1 class='upload-title'>💾 Upload your file</h1>
+        <div class="upload-block">
+            <label for="file-input" class="custom-file-upload-btn">
+            Select file
+            </label>
+            <input type="file" name="fileToUpload" id="file-input" style="display:none;">
+            <span class="file-name" id="file-name">Upload file : No file selected</span>
+        </div>
+            <button type="submit" name="upload-btn" id="upload-btn" class="upload-btn">Upload my Masterpiece</button>
+            <span id="progress"></span>
+            <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 0%"></div>
+            </div>
+    </div>
+</template>
